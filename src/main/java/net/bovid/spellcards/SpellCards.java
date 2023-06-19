@@ -17,6 +17,7 @@ public class SpellCards {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // Very Important Comment
+    // Another Very Important Comment
     public SpellCards() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
