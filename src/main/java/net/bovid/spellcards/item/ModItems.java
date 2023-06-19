@@ -13,9 +13,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, SpellCards.MOD_ID);
 
     public static final RegistryObject<Item> FIREBALL = ITEMS.register("fireball",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
     public static final RegistryObject<Item> FROSTBOLT = ITEMS.register("frostbolt",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
