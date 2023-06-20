@@ -1,8 +1,12 @@
 {
-  "item.spellcards.fireball": "Fireball",
-  "item.spellcards.frostbolt": "Frostbolt",
+  //items
   "item.spellcards.manacrystal": "Mana Crystal",
 
+  //spells
+  "item.spellcards.fireball": "Fireball",
+  "item.spellcards.frostbolt": "Frostbolt",
+
+  //creative tab
   "itemGroup.spelltab": "Spell Tab"
 
 }

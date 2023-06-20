@@ -12,11 +12,14 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, SpellCards.MOD_ID);
 
+    //Common items
+    public static final RegistryObject<Item> MANACRYSTAL = ITEMS.register("manacrystal",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
+
+    //Spells
     public static final RegistryObject<Item> FIREBALL = ITEMS.register("fireball",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
     public static final RegistryObject<Item> FROSTBOLT = ITEMS.register("frostbolt",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
-    public static final RegistryObject<Item> MANACRYSTAL = ITEMS.register("manacrystal",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
 
     public static void register(IEventBus eventBus) {

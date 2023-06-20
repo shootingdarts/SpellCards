@@ -20,8 +20,6 @@ public class SpellCards {
     public static final String MOD_ID = "spellcards";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    // Very Important Comment
-    // Another Very Important Comment
     public SpellCards() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
