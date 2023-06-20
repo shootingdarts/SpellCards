@@ -47,7 +47,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "spellcraft:mana_crystal"
+              "name": "spellcards:mana_crystal"
             }
           ]
         }
