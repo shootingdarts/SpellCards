@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "spellbooks:mana_crystal_block"
+    }
+  ],
+  "result": {
+    "item": "spellbooks:mana_crystal",
+    "count": 9
+  }
+}
