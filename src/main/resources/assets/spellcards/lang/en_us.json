@@ -1,6 +1,6 @@
 {
   //items
-  "item.spellcards.manacrystal": "Mana Crystal",
+  "item.spellcards.mana_crystal": "Mana Crystal",
 
   //blocks
   "block.spellcards.mana_crystal_block": "Block of Mana Crystal",

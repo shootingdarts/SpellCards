@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "spellcards:item/manacrystal"
+    "layer0": "spellcards:item/mana_crystal"
   }
 }
