@@ -1,6 +1,7 @@
 package net.bovid.spellcards;
 
 import com.mojang.logging.LogUtils;
+import net.bovid.spellcards.block.ModBlocks;
 import net.bovid.spellcards.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +26,7 @@ public class SpellCards {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
