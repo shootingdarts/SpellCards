@@ -13,7 +13,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, SpellCards.MOD_ID);
 
     //Common items
-    public static final RegistryObject<Item> MANACRYSTAL = ITEMS.register("manacrystal",
+    public static final RegistryObject<Item> MANACRYSTAL = ITEMS.register("mana_crystal",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
 
     //Spells
