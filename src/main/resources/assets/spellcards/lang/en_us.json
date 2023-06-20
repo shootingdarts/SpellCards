@@ -1,7 +1,8 @@
 {
   "item.spellcards.fireball": "Fireball",
   "item.spellcards.frostbolt": "Frostbolt",
+  "item.spellcards.manacrystal": "Mana Crystal",
 
-  "itemGroup.spelltab": "Spell Tab",
+  "itemGroup.spelltab": "Spell Tab"
 
 }

@@ -16,6 +16,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
     public static final RegistryObject<Item> FROSTBOLT = ITEMS.register("frostbolt",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
+    public static final RegistryObject<Item> MANACRYSTAL = ITEMS.register("manacrystal",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SPELL_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
