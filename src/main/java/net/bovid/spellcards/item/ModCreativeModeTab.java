@@ -10,7 +10,7 @@ public class ModCreativeModeTab {
             return new ItemStack(ModItems.FIREBALL.get());
         }
     };
-    public static final CreativeModeTab BLOCK_TAB = new CreativeModeTab("blocktab") {
+    public static final CreativeModeTab CRYSTAL_TAB = new CreativeModeTab("crystaltab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.MANACRYSTAL.get());
