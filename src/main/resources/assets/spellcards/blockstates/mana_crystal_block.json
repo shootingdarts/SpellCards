@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": {}
+    "": { "model":  "spellcards:block/mana_crystal_block"}
   }
 }
