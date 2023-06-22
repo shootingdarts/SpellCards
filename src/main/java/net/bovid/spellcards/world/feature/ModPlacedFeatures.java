@@ -17,7 +17,7 @@ public class ModPlacedFeatures {
     public static final RegistryObject<PlacedFeature> MANA_CRYSTAL_ORE_PLACED = PLACED_FEATURES.register("mana_crystal_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.MANA_CRYSTAL_ORE.getHolder().get(),
                     commonOrePlacement(7, //VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.belowTop(80)))));
 
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
