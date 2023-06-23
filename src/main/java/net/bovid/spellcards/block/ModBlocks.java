@@ -1,6 +1,8 @@
 package net.bovid.spellcards.block;
 
+import com.sun.jna.platform.unix.solaris.LibKstat;
 import net.bovid.spellcards.SpellCards;
+import net.bovid.spellcards.block.custom.Mana_Crystal_Ore;
 import net.bovid.spellcards.item.ModCreativeModeTab;
 import net.bovid.spellcards.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -25,8 +27,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK = registerBlock("mana_crystal_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST).strength(6).requiresCorrectToolForDrops().lightLevel(value -> 15)), ModCreativeModeTab.CRYSTAL_TAB);
     public static final RegistryObject<Block> MANA_CRYSTAL_ORE = registerBlock("mana_crystal_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(6f).requiresCorrectToolForDrops().lightLevel((p_50872_) -> {return 15;}),
-                    UniformInt.of(3,7)), ModCreativeModeTab.CRYSTAL_TAB);
+            () -> new Mana_Crystal_Ore(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(Mana_Crystal_Ore.LIT) ? 15:0)), ModCreativeModeTab.CRYSTAL_TAB);
     public static final RegistryObject<Block> DEEPSLATE_MANA_CRYSTAL_ORE = registerBlock("deepslate_mana_crystal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(7f).requiresCorrectToolForDrops().lightLevel((p_50872_) -> {return 15;}),
                     UniformInt.of(3,7)), ModCreativeModeTab.CRYSTAL_TAB);
