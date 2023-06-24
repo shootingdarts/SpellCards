@@ -1,8 +1,11 @@
 package net.bovid.spellcards.block.custom;
 
+import net.bovid.spellcards.particle.ModParticles;
+import net.bovid.spellcards.particle.custom.ManaParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -19,6 +22,7 @@ public class Mana_Crystal_Ore extends Block {
     public static final BooleanProperty LIT = BooleanProperty.create("lit");
     public Mana_Crystal_Ore(Properties properties){
         super(properties);
+        this.registerDefaultState(this.defaultBlockState().setValue(LIT, Boolean.valueOf(false)));
     }
 
     public void attack(BlockState state, Level level, BlockPos pos, Player player) {
@@ -42,14 +46,6 @@ public class Mana_Crystal_Ore extends Block {
         }
     }
 
-    @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
-            level.setBlock(pos, state.cycle(LIT), 3);
-        }
-        return super.use(state, level, pos, player, hand, hitResult);
-    }
-
     private static void spawnParticles(Level p_55455_, BlockPos p_55456_) {
         double d0 = 0.5625D;
         RandomSource randomsource = p_55455_.random;
@@ -61,7 +57,7 @@ public class Mana_Crystal_Ore extends Block {
                 double d1 = direction$axis == Direction.Axis.X ? 0.5D + 0.5625D * (double)direction.getStepX() : (double)randomsource.nextFloat();
                 double d2 = direction$axis == Direction.Axis.Y ? 0.5D + 0.5625D * (double)direction.getStepY() : (double)randomsource.nextFloat();
                 double d3 = direction$axis == Direction.Axis.Z ? 0.5D + 0.5625D * (double)direction.getStepZ() : (double)randomsource.nextFloat();
-                p_55455_.addParticle(DustParticleOptions.REDSTONE, (double)p_55456_.getX() + d1, (double)p_55456_.getY() + d2, (double)p_55456_.getZ() + d3, 0.0D, 0.0D, 0.0D);
+                p_55455_.addParticle(ModParticles.MANA_PARTICLES.get(), (double)p_55456_.getX() + d1, (double)p_55456_.getY() + d2, (double)p_55456_.getZ() + d3, 0.0D, 0.0D, 0.0D);
             }
         }
 

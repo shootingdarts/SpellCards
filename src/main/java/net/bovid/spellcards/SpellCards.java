@@ -3,6 +3,7 @@ package net.bovid.spellcards;
 import com.mojang.logging.LogUtils;
 import net.bovid.spellcards.block.ModBlocks;
 import net.bovid.spellcards.item.ModItems;
+import net.bovid.spellcards.particle.ModParticles;
 import net.bovid.spellcards.world.feature.ModConfiguredFeatures;
 import net.bovid.spellcards.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +31,7 @@ public class SpellCards {
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
