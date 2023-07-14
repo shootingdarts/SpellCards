@@ -32,7 +32,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(Mana_Crystal_Ore.LIT) ? 15:0)), ModCreativeModeTab.CRYSTAL_TAB);
     public static final RegistryObject<Block> DEEPSLATE_MANA_CRYSTAL_ORE = registerBlock("deepslate_mana_crystal_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(7f).requiresCorrectToolForDrops().lightLevel((p_50872_) -> {return 15;}),
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .strength(7f)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((p_50872_) -> {return 15;}),
                     UniformInt.of(3,7)), ModCreativeModeTab.CRYSTAL_TAB);
 
 
