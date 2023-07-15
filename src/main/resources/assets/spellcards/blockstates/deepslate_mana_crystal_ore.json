@@ -1,5 +1,6 @@
 {
   "variants": {
-    "": { "model":  "spellcards:block/deepslate_mana_crystal_ore"}
+    "lit=true": { "model":  "spellcards:block/deepslate_mana_crystal_ore_on"},
+    "lit=false": { "model":  "spellcards:block/deepslate_mana_crystal_ore_off"}
   }
 }
